@@ -10,5 +10,41 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background: #343f4f;
+}
 
+.wrapper {
+    display: inline-flex;
+}
+
+.wrapper  .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txt {
+    margin-left: 15px;
+}
+
+.dynamic-txt li{
+    color: #fc6d6d;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+
+}
+
+.dynamic-txt li span {
+    position: relative;
+}
+
+.dynamic-txt li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 1.5s steps(10) infinite;
 }
