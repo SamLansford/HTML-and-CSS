@@ -25,6 +25,10 @@ body {
 
 .wrapper .dynamic-txt {
     margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    background: #343f4f;
+    overflow: hidden;
 }
 
 .dynamic-txt li{
@@ -32,9 +36,16 @@ body {
     list-style: none;
     font-size: 60px;
     font-weight: 500;
-
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
 }
 
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
 .dynamic-txt li span {
     position: relative;
 }
@@ -45,6 +56,14 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
+    background: #343f4f;
     border-left: 2px solid #fc6d6d;
-    animation: typing 1.5s steps(10) infinite;
+    animation: typing 2s steps(11) infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
