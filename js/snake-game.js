@@ -60,7 +60,7 @@ class Apple {
 
 let canvas = document.getElementById("canvas");
 
-let snake = new Snake();
+let snake = new Snake(20, 20, 20);
 
 let apple = new Apple();
 
@@ -80,6 +80,8 @@ function show() {
 }
 
 function update() {
+    canvasContext.clearRect(0, 0, canvas.width, canvas.height)
+
     snake.move();
 
 }
